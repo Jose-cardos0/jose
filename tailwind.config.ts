@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "bg-custom": "#1B1B1B",
+        "border-custom": "#262626",
+        Forground: "#171717",
+      },
+      fontFamily: {
+        Roboto: "Roboto",
       },
     },
   },
