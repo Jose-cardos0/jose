@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Header from "./header";
 
 //icons
@@ -295,7 +293,7 @@ export default function Home() {
             >
               • Back-end
             </h2>
-            <div className="flex items-start items-center w-full">
+            <div className="flex items-start  w-full">
               <IoLogoFirebase
                 size={40}
                 color="#ffff"
