@@ -14,6 +14,11 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoFirebase } from "react-icons/io5";
 import { PiFileSqlFill } from "react-icons/pi";
 import { DiMongodb } from "react-icons/di";
+//redes
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -21,7 +26,7 @@ export default function Home() {
       <div className="max-w-7xl">
         <Header />
       </div>
-      <section className="w-full mt-5">
+      <section className="w-screen mt-5">
         <div
           className="max-w-7xl bg-bg-custom border-2 
         border-border-custom  mx-auto rounded-md "
@@ -69,7 +74,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full mt-5">
+      <section className="w-screen mt-5">
         <div
           className="max-w-7xl bg-Forground 
           mx-auto rounded-md flex gap-4 "
@@ -201,14 +206,14 @@ export default function Home() {
             </p>
             <div
               className="relative w-full 
-            flex items-center justify-center ml-24 "
+            flex items-center justify-center   "
             >
-              <div>
+              <div className="-ml-14 overflow-hidden">
                 <iframe
-                  className=" mt-9   rounded-t-2xl ml-2  "
+                  className=" mt-6  ml-14 shadow-2xl shadow-blue-700 overflow-hidden    "
                   src="https://prototype-game-space.vercel.app/"
-                  width="69%"
-                  height="320px"
+                  width="85%"
+                  height="200px"
                   title="game jsdeveloper"
                 ></iframe>
                 <a
@@ -216,11 +221,11 @@ export default function Home() {
                   target="_blank"
                 >
                   <img
-                    src="/Mockup.png"
+                    src="/notebook.png"
                     alt=""
                     className="absolute 
-               w-56 top-0 mt-5 shadow-2xl 
-                 shadow-blue-950 hover:scale-105 transition duration-500"
+               max-w-md top-0 mt-4 
+                  hover:scale-105 transition duration-500 -ml-4 overflow-hidden "
                   />
                 </a>
               </div>
@@ -228,7 +233,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full mt-5">
+      <section className="w-screen mt-5">
         <div
           className="max-w-7xl bg-Forground 
           mx-auto rounded-md flex gap-4 "
@@ -317,15 +322,163 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full mt-5">
+      <section className="w-screen mt-5">
         <div
           className="max-w-7xl bg-Forground 
-          mx-auto rounded-md flex gap-4 "
+          mx-auto rounded-md flex gap-4 flex-col "
         >
           <div
             className="flex items-center justify-between  bg-bg-custom border
-           border-border-custom w-full p-10 flex-col  "
-          ></div>
+           border-border-custom w-full p-10   "
+          >
+            <div className="flex gap-10">
+              <video
+                src="/videoCelular.mp4"
+                className="max-w-60 rounded-3xl  "
+                autoPlay
+                muted
+              ></video>
+              <div>
+                <h2
+                  className="font-extralight font-Roboto
+             text-sm  w-full mb-5"
+                >
+                  • Meus projetos
+                </h2>
+                {/*primeiro */}
+                <div className="w-full flex-col items-end mb-5 ">
+                  <div className="font-extralight font-Roboto text-sm border-l mr-5 relative ">
+                    <p className="ml-4">Agendamento online</p>
+                    <p className="ml-4 text-xs italic">
+                      Desenvolvimento web, aplicativo web, back-end em firebase,
+                      comunicação com api whastweb.
+                    </p>
+                    <div className="ml-4">
+                      <button className="">
+                        <p
+                          className="text-xs hover:scale-105 duration-300 
+                    transition hover:text-orange-400 hover:font-bold"
+                        >
+                          • Visualizar
+                        </p>
+                      </button>
+                    </div>
+                    <div className="absolute bg-white p-1 rounded-full -left-1"></div>
+                  </div>
+                </div>
+                {/*segundo */}
+                <div className="w-full flex-col items-end ">
+                  <div className="font-extralight font-Roboto text-sm border-l mr-5 relative mb-5">
+                    <p className="ml-4">Web Carros</p>
+                    <p className="ml-4 text-xs italic">
+                      Desenvolvimento web, back-end em firebase, comunicação com
+                      api whastweb, interface de usuário e administrador.
+                    </p>
+                    <div className="ml-4">
+                      <button className="">
+                        <p
+                          className="text-xs hover:scale-105 duration-300 
+                    transition hover:text-orange-400 hover:font-bold"
+                        >
+                          • Visualizar
+                        </p>
+                      </button>
+                    </div>
+                    <div className="absolute bg-white p-1 rounded-full -left-1"></div>
+                  </div>
+                </div>
+                {/*terceiro */}
+                <div className="w-full flex-col items-end ">
+                  <div className="font-extralight font-Roboto text-sm border-l mr-5 relative ">
+                    <p className="ml-4">Controle de Almoxarifado</p>
+                    <p className="ml-4 text-xs italic">
+                      Desenvolvimento web, back-end em nodejs, relatório em
+                      excel, interface de usuário, administrador, funcionário,
+                      produto, fornecedor, estoque, entrada, saída, estoque
+                      atual.
+                    </p>
+                    <div className="ml-4">
+                      <button className="">
+                        <p
+                          className="text-xs hover:scale-105 duration-300 
+                    transition hover:text-orange-400 hover:font-bold"
+                        >
+                          • Visualizar
+                        </p>
+                      </button>
+                    </div>
+                    <div className="absolute bg-white p-1 rounded-full -left-1"></div>
+                  </div>
+                </div>
+                {/*quarto */}
+                <div className="w-full flex-col items-end ">
+                  <div className="font-extralight font-Roboto text-sm border-l mr-5 relative mt-5 ">
+                    <p className="ml-4">Mine-Blog JS Developer</p>
+                    <p className="ml-4 text-xs italic">
+                      Desenvolvimento web, back-end em firebase, interface de
+                      usuário, administrador, post, editar post, cadastro e
+                      recuperação de dados.
+                    </p>
+                    <div className="ml-4">
+                      <button className="">
+                        <p
+                          className="text-xs hover:scale-105 duration-300 
+                    transition hover:text-orange-400 hover:font-bold"
+                        >
+                          • Visualizar
+                        </p>
+                      </button>
+                    </div>
+                    <div className="absolute bg-white p-1 rounded-full -left-1"></div>
+                  </div>
+                </div>
+                {/*quarto */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-screen mt-5">
+        <div
+          className="max-w-7xl bg-Forground 
+          mx-auto rounded-md flex gap-4 flex-col "
+        >
+          <div
+            className="flex items-start justify-between  bg-bg-custom border
+           border-border-custom  p-10 flex-col   "
+          >
+            <h1 className="font-extralight font-Roboto">• Mídias sociais</h1>
+            <div className="flex gap-3 mt-5">
+              <a href="" target="_blanck">
+                <FaInstagramSquare
+                  color="#ffff"
+                  size={40}
+                  className="hover:scale-105 transition duration-500"
+                />
+              </a>
+              <a href="" target="_blanck">
+                <FaWhatsappSquare
+                  color="#ffff"
+                  size={40}
+                  className="hover:scale-105 transition duration-500"
+                />
+              </a>
+              <a href="" target="_blanck">
+                <FaLinkedin
+                  color="#ffff"
+                  size={40}
+                  className="hover:scale-105 transition duration-500"
+                />
+              </a>
+              <a href="#" target="_blanck">
+                <FaGithub
+                  color="#ffff"
+                  size={40}
+                  className="hover:scale-105 transition duration-500"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
