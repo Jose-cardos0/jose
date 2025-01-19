@@ -1,3 +1,6 @@
+"use client";
+import { useState, useEffect } from "react";
+
 import Header from "./header";
 
 //icons
@@ -19,12 +22,38 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
+  const [text, setText] = useState("");
+  const [cursor, setCursor] = useState(true);
+
+  const textToType = "Olá, me chamo José!";
+  const typingSpeed = 50; // velocidade de digitação em milissegundos
+  const cursorBlinkSpeed = 500; // velocidade de piscar do cursor em milissegundos
+
+  useEffect(() => {
+    let typingInterval = setInterval(() => {
+      if (text.length < textToType.length) {
+        setText(text + textToType[text.length]);
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+
+    let cursorInterval = setInterval(() => {
+      setCursor(!cursor);
+    }, cursorBlinkSpeed);
+
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
+    };
+  }, [text, cursor]);
+
   return (
-    <main className="w-screen flex-col items-center justify-center m-auto">
-      <div className="max-w-7xl">
+    <main className="w-full h-auto flex-col items-center justify-center m-auto">
+      <div className="w-full flex items-center justify-center m-auto">
         <Header />
       </div>
-      <section className="w-screen mt-5">
+      <section className="w-full mt-5">
         <div
           className="max-w-7xl bg-bg-custom border-2 
         border-border-custom  mx-auto rounded-md "
@@ -35,7 +64,8 @@ export default function Home() {
                 Programador FullStack
               </p>
               <h1 className="mt-20 font-Roboto font-light text-xl">
-                Olá, me chamo José!
+                {text}
+                {cursor ? "|" : " "}
               </h1>
               <p className="font-extralight font-Roboto text-sm">
                 Sou um programador FullStack <br />e Design gráfico.
@@ -44,7 +74,7 @@ export default function Home() {
                 <button
                   className="bg-white px-2 py-1 mr-4  
                  rounded-md hover:scale-105 transition
-                  duration-300 
+                  duration-300  hover:bg-orange-400
                  "
                 >
                   <p
@@ -58,7 +88,7 @@ export default function Home() {
                   className="bg-gray-300
                  px-2 py-1 border-gray-200  
                  rounded-md hover:scale-105 transition
-                  duration-300 "
+                  duration-300 hover:bg-orange-400 "
                 >
                   <p className="font-light font-Roboto text-black">
                     Copy Email | +
@@ -72,8 +102,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-screen mt-5">
+      <section id="trabalhos" className="w-full mt-5">
         <div
+          id="sobre"
           className="max-w-7xl bg-Forground 
           mx-auto rounded-md flex gap-4 "
         >
@@ -93,12 +124,14 @@ export default function Home() {
                 </p>
                 <div className="ml-4">
                   <button className="">
-                    <p
+                    <a
+                      href="https://sertao-transportes.vercel.app/"
+                      target="_blanck"
                       className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
                     >
                       • Visualizar
-                    </p>
+                    </a>
                   </button>
                 </div>
                 <div className="absolute bg-white p-1 rounded-full -left-1"></div>
@@ -113,12 +146,14 @@ export default function Home() {
                 </p>
                 <div className="ml-4">
                   <button className="">
-                    <p
+                    <a
+                      href="https://santuario-project-eyyg.vercel.app/"
+                      target="_blanck"
                       className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
                     >
                       • Visualizar
-                    </p>
+                    </a>
                   </button>
                 </div>
                 <div className="absolute bg-white p-1 rounded-full -left-1"></div>
@@ -133,12 +168,14 @@ export default function Home() {
                 </p>
                 <div className="ml-4">
                   <button className="">
-                    <p
+                    <a
+                      href="https://natvilleproject2.vercel.app/"
+                      target="_blanck"
                       className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
                     >
                       • Visualizar
-                    </p>
+                    </a>
                   </button>
                 </div>
                 <div className="absolute bg-white p-1 rounded-full -left-1"></div>
@@ -176,7 +213,7 @@ export default function Home() {
                 <div className="ml-4">
                   <button className="">
                     <a
-                      href="https://skelth.org/novo/"
+                      href="https://apiprodutosnatville.vercel.app/produtos"
                       target="_blank"
                       className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
@@ -231,7 +268,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-screen mt-5">
+      <section className="w-full mt-5">
         <div
           className="max-w-7xl bg-Forground 
           mx-auto rounded-md flex gap-4 "
@@ -320,7 +357,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-screen mt-5">
+      <section id="projetos" className="w-full mt-5">
         <div
           className="max-w-7xl bg-Forground 
           mx-auto rounded-md flex gap-4 flex-col "
@@ -353,12 +390,14 @@ export default function Home() {
                     </p>
                     <div className="ml-4">
                       <button className="">
-                        <p
+                        <a
+                          href="https://mona-project.vercel.app/"
+                          target="_blanck"
                           className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
                         >
                           • Visualizar
-                        </p>
+                        </a>
                       </button>
                     </div>
                     <div className="absolute bg-white p-1 rounded-full -left-1"></div>
@@ -374,12 +413,14 @@ export default function Home() {
                     </p>
                     <div className="ml-4">
                       <button className="">
-                        <p
+                        <a
+                          href="https://webcarros-silk.vercel.app/"
+                          target="_blanck"
                           className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
                         >
                           • Visualizar
-                        </p>
+                        </a>
                       </button>
                     </div>
                     <div className="absolute bg-white p-1 rounded-full -left-1"></div>
@@ -397,12 +438,14 @@ export default function Home() {
                     </p>
                     <div className="ml-4">
                       <button className="">
-                        <p
+                        <a
+                          href="https://project-almoxarifado.vercel.app/"
+                          target="_blanck"
                           className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
                         >
                           • Visualizar
-                        </p>
+                        </a>
                       </button>
                     </div>
                     <div className="absolute bg-white p-1 rounded-full -left-1"></div>
@@ -419,12 +462,14 @@ export default function Home() {
                     </p>
                     <div className="ml-4">
                       <button className="">
-                        <p
+                        <a
+                          href="https://mini-blog-jsdeveloper.vercel.app/"
+                          target="_blanck"
                           className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
                         >
                           • Visualizar
-                        </p>
+                        </a>
                       </button>
                     </div>
                     <div className="absolute bg-white p-1 rounded-full -left-1"></div>
@@ -436,7 +481,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-screen mt-5">
+      <section className="w-full mt-5 mb-5">
         <div
           className="max-w-7xl bg-Forground 
           mx-auto rounded-md flex gap-4 flex-col "
@@ -451,28 +496,29 @@ export default function Home() {
                 <FaInstagramSquare
                   color="#ffff"
                   size={40}
-                  className="hover:scale-105 transition duration-500"
+                  className="hover:scale-105 transition duration-500
+                   hover:bg-orange-400 rounded-md"
                 />
               </a>
               <a href="" target="_blanck">
                 <FaWhatsappSquare
                   color="#ffff"
                   size={40}
-                  className="hover:scale-105 transition duration-500"
+                  className="hover:scale-105 transition duration-500 hover:bg-orange-400 rounded-md"
                 />
               </a>
               <a href="" target="_blanck">
                 <FaLinkedin
                   color="#ffff"
                   size={40}
-                  className="hover:scale-105 transition duration-500"
+                  className="hover:scale-105 transition duration-500 hover:bg-orange-400 rounded-md"
                 />
               </a>
               <a href="#" target="_blanck">
                 <FaGithub
                   color="#ffff"
                   size={40}
-                  className="hover:scale-105 transition duration-500"
+                  className="hover:scale-105 transition duration-500 hover:bg-orange-400 rounded-full"
                 />
               </a>
             </div>
