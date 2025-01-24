@@ -96,8 +96,17 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            <div>
-              <img className="max-w-16" src="/logo.png" alt="" />
+            <div
+              className="max-w-96 bg-white rounded-full
+             hover:bg-orange-400 transition duration-300
+              hover:drop-shadow-xl hover:shadow-orange-400
+               cursor-pointer "
+            >
+              <img
+                className="filter grayscale hover:grayscale-0 rounded-b-3xl -ml-1"
+                src="/foto.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
