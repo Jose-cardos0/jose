@@ -97,13 +97,13 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="max-w-96 bg-white rounded-full
+              className="max-w-96 bg-white rounded-t-full rounded-bl-full rounded-br-xl
              hover:bg-orange-400 transition duration-300
               hover:drop-shadow-xl hover:shadow-orange-400
                cursor-pointer "
             >
               <img
-                className="filter grayscale hover:grayscale-0 rounded-b-3xl -ml-1"
+                className="filter grayscale hover:grayscale-0 "
                 src="/foto.png"
                 alt=""
               />
