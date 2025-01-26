@@ -1,4 +1,5 @@
-// import { useState, useEffect } from "react";
+"use client";
+import { useState, useEffect } from "react";
 
 import Header from "./header";
 
@@ -21,31 +22,31 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
-  // const [text, setText] = useState("");
-  // const [cursor, setCursor] = useState(true);
+  const [text, setText] = useState("");
+  const [cursor, setCursor] = useState(true);
 
-  // const textToType = "Olá, me chamo José!";
-  // const typingSpeed = 50; // velocidade de digitação em milissegundos
-  // const cursorBlinkSpeed = 500; // velocidade de piscar do cursor em milissegundos
+  const textToType = "Olá, me chamo José!";
+  const typingSpeed = 50; // velocidade de digitação em milissegundos
+  const cursorBlinkSpeed = 500; // velocidade de piscar do cursor em milissegundos
 
-  // useEffect(() => {
-  //   let typingInterval = setInterval(() => {
-  //     if (text.length < textToType.length) {
-  //       setText(text + textToType[text.length]);
-  //     } else {
-  //       clearInterval(typingInterval);
-  //     }
-  //   }, typingSpeed);
+  useEffect(() => {
+    let typingInterval = setInterval(() => {
+      if (text.length < textToType.length) {
+        setText(text + textToType[text.length]);
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
 
-  //   let cursorInterval = setInterval(() => {
-  //     setCursor(!cursor);
-  //   }, cursorBlinkSpeed);
+    let cursorInterval = setInterval(() => {
+      setCursor(!cursor);
+    }, cursorBlinkSpeed);
 
-  //   return () => {
-  //     clearInterval(typingInterval);
-  //     clearInterval(cursorInterval);
-  //   };
-  // }, [text, cursor]);
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
+    };
+  }, [text, cursor]);
 
   return (
     <main className="w-full h-auto flex-col items-center justify-center m-auto max-md:px-4">
@@ -64,8 +65,8 @@ export default function Home() {
               </p>
               <div className="-mt-16">
                 <h1 className="mt-20 font-Roboto font-light text-xl ">
-                  {/* {text}
-                  {cursor ? "|" : " "} */}
+                  {text}
+                  {cursor ? "|" : " "}
                 </h1>
                 <p className="font-extralight font-Roboto text-sm ">
                   Sou um programador FullStack <br />e Design gráfico.
@@ -254,17 +255,17 @@ export default function Home() {
             flex items-center justify-center "
             >
               <div className=" relative overflow-hidden">
-                <button
-                  className="absolute bg-white p-1 rounded-md text-blue-700 left-40 top-44
-                font-bold max-md:left-24 max-md:top-32 max-md:text-xs
-                 animate-pulse shadow-md shadow-blue-600"
-                >
-                  START
-                </button>
                 <a
                   href="https://prototype-game-space.vercel.app/"
                   target="_blank"
                 >
+                  <button
+                    className="absolute bg-white p-1 rounded-md text-blue-700 left-40 top-44
+                font-bold max-md:left-24 max-md:top-32 max-md:text-xs
+                 animate-pulse shadow-md shadow-blue-600 max-md:ml-2"
+                  >
+                    START
+                  </button>
                   <img
                     src="/notebook.png"
                     alt=""
