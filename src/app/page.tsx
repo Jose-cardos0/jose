@@ -1,5 +1,4 @@
-"use client";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 import Header from "./header";
 
@@ -22,34 +21,34 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
-  const [text, setText] = useState("");
-  const [cursor, setCursor] = useState(true);
+  // const [text, setText] = useState("");
+  // const [cursor, setCursor] = useState(true);
 
-  const textToType = "Olá, me chamo José!";
-  const typingSpeed = 50; // velocidade de digitação em milissegundos
-  const cursorBlinkSpeed = 500; // velocidade de piscar do cursor em milissegundos
+  // const textToType = "Olá, me chamo José!";
+  // const typingSpeed = 50; // velocidade de digitação em milissegundos
+  // const cursorBlinkSpeed = 500; // velocidade de piscar do cursor em milissegundos
 
-  useEffect(() => {
-    let typingInterval = setInterval(() => {
-      if (text.length < textToType.length) {
-        setText(text + textToType[text.length]);
-      } else {
-        clearInterval(typingInterval);
-      }
-    }, typingSpeed);
+  // useEffect(() => {
+  //   let typingInterval = setInterval(() => {
+  //     if (text.length < textToType.length) {
+  //       setText(text + textToType[text.length]);
+  //     } else {
+  //       clearInterval(typingInterval);
+  //     }
+  //   }, typingSpeed);
 
-    let cursorInterval = setInterval(() => {
-      setCursor(!cursor);
-    }, cursorBlinkSpeed);
+  //   let cursorInterval = setInterval(() => {
+  //     setCursor(!cursor);
+  //   }, cursorBlinkSpeed);
 
-    return () => {
-      clearInterval(typingInterval);
-      clearInterval(cursorInterval);
-    };
-  }, [text, cursor]);
+  //   return () => {
+  //     clearInterval(typingInterval);
+  //     clearInterval(cursorInterval);
+  //   };
+  // }, [text, cursor]);
 
   return (
-    <main className="w-full h-auto flex-col items-center justify-center m-auto">
+    <main className="w-full h-auto flex-col items-center justify-center m-auto max-md:px-4">
       <div className="w-full flex items-center justify-center m-auto">
         <Header />
       </div>
@@ -58,19 +57,21 @@ export default function Home() {
           className="max-w-7xl bg-bg-custom border-2 
         border-border-custom  mx-auto rounded-md "
         >
-          <div className="flex items-center justify-between m-10 ">
+          <div className="flex items-center justify-between m-10 max-md:flex-col max-md:m-5 ">
             <div className="flex-col">
               <p className="font-extralight font-Roboto">
                 Programador FullStack
               </p>
-              <h1 className="mt-20 font-Roboto font-light text-xl">
-                {text}
-                {cursor ? "|" : " "}
-              </h1>
-              <p className="font-extralight font-Roboto text-sm">
-                Sou um programador FullStack <br />e Design gráfico.
-              </p>
-              <div className="mt-5 ">
+              <div className="-mt-16">
+                <h1 className="mt-20 font-Roboto font-light text-xl ">
+                  {/* {text}
+                  {cursor ? "|" : " "} */}
+                </h1>
+                <p className="font-extralight font-Roboto text-sm ">
+                  Sou um programador FullStack <br />e Design gráfico.
+                </p>
+              </div>
+              <div className="mt-5 max-md:mt-6 ">
                 <button
                   className="bg-white px-2 py-1 mr-4  
                  rounded-md hover:scale-105 transition
@@ -100,7 +101,7 @@ export default function Home() {
               className="max-w-96 bg-white rounded-t-full rounded-bl-full rounded-br-xl
              hover:bg-orange-400 transition duration-300
               hover:drop-shadow-xl hover:shadow-orange-400
-               cursor-pointer "
+               cursor-pointer max-md:mt-6 "
             >
               <img
                 className="filter grayscale hover:grayscale-0 "
@@ -111,15 +112,15 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="trabalhos" className="w-full mt-5">
+      <section id="trabalhos" className="w-full mt-5 ">
         <div
           id="sobre"
           className="max-w-7xl bg-Forground 
-          mx-auto rounded-md flex gap-4 "
+          mx-auto rounded-md flex gap-4 max-md:flex-col "
         >
           <div
             className="flex items-center justify-between  bg-bg-custom border
-           border-border-custom w-1/2 p-10  "
+           border-border-custom w-1/2 p-10 max-md:w-full max-md:flex-col   "
           >
             <h2 className="font-extralight font-Roboto text-sm">
               Trabalhos recentes
@@ -236,30 +237,30 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="flex items-center   bg-bg-custom border
-           border-border-custom w-1/2 p-10 flex-col"
+            className="flex items-center  bg-bg-custom border
+           border-border-custom w-1/2 p-10 flex-col max-md:w-full  "
           >
             <h2 className="font-extralight font-Roboto text-sm mb-2 text-center">
               Conheça um pouso mais sobre mim
             </h2>
-            <p className="font-extralight font-Roboto text-sm">
+            <p className="font-extralight font-Roboto text-sm text-justify">
               Um jovem nordestino cheio de paixão pelo universo digital, que
               combina seu talento como programador com um grande amor pela
               cultura geek. Sua habilidade em unir criatividade e tecnologia
               reflete o entusiasmo que você tem pelo que faz! 🚀
             </p>
             <div
-              className="relative w-full 
-            flex items-center justify-center   "
+              className=" w-full 
+            flex items-center justify-center "
             >
-              <div className="-ml-14 overflow-hidden">
-                <iframe
-                  className=" mt-6  ml-14 shadow-2xl shadow-blue-700 overflow-hidden    "
-                  src="https://prototype-game-space.vercel.app/"
-                  width="85%"
-                  height="200px"
-                  title="game jsdeveloper"
-                ></iframe>
+              <div className=" relative overflow-hidden">
+                <button
+                  className="absolute bg-white p-1 rounded-md text-blue-700 left-40 top-44
+                font-bold max-md:left-24 max-md:top-32 max-md:text-xs
+                 animate-pulse shadow-md shadow-blue-600"
+                >
+                  START
+                </button>
                 <a
                   href="https://prototype-game-space.vercel.app/"
                   target="_blank"
@@ -267,9 +268,8 @@ export default function Home() {
                   <img
                     src="/notebook.png"
                     alt=""
-                    className="absolute 
-               max-w-md top-0 mt-4 
-                  hover:scale-105 transition duration-500 -ml-4 overflow-hidden "
+                    className="overflow-hidden max-w-96 mt-6 
+                    max-md:w-64   "
                   />
                 </a>
               </div>
@@ -280,11 +280,11 @@ export default function Home() {
       <section className="w-full mt-5">
         <div
           className="max-w-7xl bg-Forground 
-          mx-auto rounded-md flex gap-4 "
+          mx-auto rounded-md flex gap-4  "
         >
           <div
             className="flex items-center justify-between  bg-bg-custom border
-           border-border-custom w-full p-10 flex-col  "
+           border-border-custom w-full p-10 flex-col"
           >
             <h2
               className="text-start w-full 
@@ -369,19 +369,21 @@ export default function Home() {
       <section id="projetos" className="w-full mt-5">
         <div
           className="max-w-7xl bg-Forground 
-          mx-auto rounded-md flex gap-4 flex-col "
+          mx-auto rounded-md flex gap-4 flex-col  "
         >
           <div
             className="flex items-center justify-between  bg-bg-custom border
            border-border-custom w-full p-10   "
           >
-            <div className="flex gap-10">
-              <video
-                src="/videoCelular.mp4"
-                className="max-w-60 rounded-3xl  "
-                autoPlay
-                muted
-              ></video>
+            <div className="flex gap-10 max-md:flex-col">
+              <div className="max-md:w-full max-md:flex max-md:items-center max-md:justify-center">
+                <video
+                  src="/videoCelular.mp4"
+                  className="max-w-60 rounded-3xl   "
+                  autoPlay
+                  muted
+                ></video>
+              </div>
               <div>
                 <h2
                   className="font-extralight font-Roboto
