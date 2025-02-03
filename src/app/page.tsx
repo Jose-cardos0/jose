@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 
 import Header from "./header";
 
+//images
+import Image from "next/image";
+
 //icons
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaNodeJs } from "react-icons/fa";
@@ -242,13 +245,13 @@ export default function Home() {
            border-border-custom w-1/2 p-10 flex-col max-md:w-full  "
           >
             <h2 className="font-extralight font-Roboto text-sm mb-2 text-center">
-              Conheça um pouso mais sobre mim
+              Conheça um pouco mais sobre mim
             </h2>
             <p className="font-extralight font-Roboto text-sm text-justify">
               Um jovem nordestino cheio de paixão pelo universo digital, que
               combina seu talento como programador com um grande amor pela
               cultura geek. Sua habilidade em unir criatividade e tecnologia
-              reflete o entusiasmo que você tem pelo que faz! 🚀
+              reflete o entusiasmo que tem pelo que faz! 🚀
             </p>
             <div
               className=" w-full 
