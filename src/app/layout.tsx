@@ -50,9 +50,11 @@ export const metadata: Metadata = {
     "NoSql",
     "SQL",
   ],
+  icons: "/logo.png",
   openGraph: {
-    images: ["https://i.ibb.co/C5yjyHgB/Ativo-1-4x.png"],
+    images: ["https://i.ibb.co/JFnRqkzr/logo.png"],
   },
+
   robots: {
     index: true,
     follow: true,
