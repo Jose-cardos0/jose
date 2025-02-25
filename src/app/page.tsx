@@ -3,9 +3,6 @@ import { useState, useEffect } from "react";
 
 import Header from "./header";
 
-//images
-import Image from "next/image";
-
 //icons
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaNodeJs } from "react-icons/fa";
@@ -183,7 +180,7 @@ export default function Home() {
                 <div className="ml-4">
                   <button className="">
                     <a
-                      href="https://natvilleproject2.vercel.app/"
+                      href="https://natvilleproject2-65pt.vercel.app/"
                       target="_blanck"
                       className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
@@ -491,6 +488,30 @@ export default function Home() {
                   </div>
                 </div>
                 {/*quarto */}
+                {/*quinto */}
+                <div className="w-full flex-col items-end ">
+                  <div className="font-extralight font-Roboto text-sm border-l mr-5 relative mt-5 ">
+                    <p className="ml-4">Doramus cardápio</p>
+                    <p className="ml-4 text-xs italic">
+                      Desenvolvimento web, back-end em node js. Controle de
+                      pedido, inclusão e exclusão com conexão via whatsapp.
+                    </p>
+                    <div className="ml-4">
+                      <button className="">
+                        <a
+                          href="https://doramus-cardapio-web.vercel.app/"
+                          target="_blanck"
+                          className="text-xs hover:scale-105 duration-300 
+                    transition hover:text-orange-400 hover:font-bold"
+                        >
+                          • Visualizar
+                        </a>
+                      </button>
+                    </div>
+                    <div className="absolute bg-white p-1 rounded-full -left-1"></div>
+                  </div>
+                </div>
+                {/*quinto */}
               </div>
             </div>
           </div>
@@ -507,7 +528,7 @@ export default function Home() {
           >
             <h1 className="font-extralight font-Roboto">• Mídias sociais</h1>
             <div className="flex gap-3 mt-5">
-              <a href="" target="_blanck">
+              <a href="https://www.instagram.com/dev.jose.c/" target="_blanck">
                 <FaInstagramSquare
                   color="#ffff"
                   size={40}
@@ -515,21 +536,27 @@ export default function Home() {
                    hover:bg-orange-400 rounded-md"
                 />
               </a>
-              <a href="" target="_blanck">
+              <a
+                href="https://wa.me/5579999062401?text=Ol%C3%A1%2C%20Jos%C3%A9%2C%20tudo%20bem%3F"
+                target="_blanck"
+              >
                 <FaWhatsappSquare
                   color="#ffff"
                   size={40}
                   className="hover:scale-105 transition duration-500 hover:bg-orange-400 rounded-md"
                 />
               </a>
-              <a href="" target="_blanck">
+              <a
+                href="www.linkedin.com/in/josé-cleverton-5940042b4"
+                target="_blanck"
+              >
                 <FaLinkedin
                   color="#ffff"
                   size={40}
                   className="hover:scale-105 transition duration-500 hover:bg-orange-400 rounded-md"
                 />
               </a>
-              <a href="#" target="_blanck">
+              <a href="https://github.com/Jose-cardos0" target="_blanck">
                 <FaGithub
                   color="#ffff"
                   size={40}
