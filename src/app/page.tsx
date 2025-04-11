@@ -3,9 +3,6 @@ import { useState, useEffect } from "react";
 
 import Header from "./header";
 
-//images
-import Image from "next/image";
-
 //icons
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaNodeJs } from "react-icons/fa";
@@ -33,7 +30,7 @@ export default function Home() {
   const cursorBlinkSpeed = 500; // velocidade de piscar do cursor em milissegundos
 
   useEffect(() => {
-    let typingInterval = setInterval(() => {
+    const typingInterval = setInterval(() => {
       if (text.length < textToType.length) {
         setText(text + textToType[text.length]);
       } else {
@@ -41,7 +38,7 @@ export default function Home() {
       }
     }, typingSpeed);
 
-    let cursorInterval = setInterval(() => {
+    const cursorInterval = setInterval(() => {
       setCursor(!cursor);
     }, cursorBlinkSpeed);
 
@@ -183,7 +180,7 @@ export default function Home() {
                 <div className="ml-4">
                   <button className="">
                     <a
-                      href="https://natvilleproject2.vercel.app/"
+                      href="https://natvilleproject2-65pt.vercel.app/"
                       target="_blanck"
                       className="text-xs hover:scale-105 duration-300 
                     transition hover:text-orange-400 hover:font-bold"
